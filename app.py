@@ -1,11 +1,11 @@
 import streamlit as st
-import pickle
+import joblib
 import numpy as np
 
 
 # Load model
-with open("heart_disease_best_model.saved", "rb") as file:
-    model = pickle.load(file)
+with open("heart_disease_best_model.joblib", "rb") as file:
+    model = joblib.load(file)
 
 # Page Title
 st.title("Heart Disease Risk Predictor")
